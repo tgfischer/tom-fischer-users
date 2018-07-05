@@ -1,0 +1,41 @@
+{
+  "name": "tom-fischer-users",
+  "version": "1.0.0",
+  "description": "The user service for Tom Fischer's website",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npx serverless offline start",
+    "deploy": "npx serverless deploy --stage prod --verbose",
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgfischer/tom-fischer-users.git"
+  },
+  "author": "Tom Fischer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tgfischer/tom-fischer-users/issues"
+  },
+  "homepage": "https://github.com/tgfischer/tom-fischer-users#readme",
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "prettier": "^1.13.7",
+    "serverless": "^1.28.0",
+    "serverless-offline": "^3.25.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-async-handler": "^1.1.3",
+    "http-status-codes": "^1.3.0",
+    "path": "^0.12.7",
+    "serverless-http": "^1.6.0",
+    "tom-fischer-joi": "^1.0.0",
+    "tom-fischer-middleware": "^1.0.0"
+  }
+}
