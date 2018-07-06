@@ -1,6 +1,7 @@
 service: tom-fischer-users
 
 plugins:
+  - serverless-offline-dotenv
   - serverless-offline
 
 custom:
@@ -22,6 +23,7 @@ provider:
       Ref: CognitoUserPool
     COGNITO_USER_POOL_CLIENT_ID:
       Ref: CognitoUserPoolClient
+    COGNITO_USER_POOL_REGION: ${self:provider.region}
 
 functions:
   signIn:
@@ -29,6 +31,13 @@ functions:
     events:
       - http:
           path: /api/signin
+          method: POST
+          cors: true
+  resetTemporaryPassword:
+    handler: src/index.handler
+    events:
+      - http:
+          path: /api/signin/reset-temporary-password
           method: POST
           cors: true
 

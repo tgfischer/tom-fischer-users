@@ -24,9 +24,11 @@
     "eslint-plugin-prettier": "^2.6.1",
     "prettier": "^1.13.7",
     "serverless": "^1.28.0",
-    "serverless-offline": "^3.25.5"
+    "serverless-offline": "^3.25.5",
+    "serverless-offline-dotenv": "^0.0.8"
   },
   "dependencies": {
+    "aws-sdk": "^2.268.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
