@@ -6,7 +6,7 @@ const joi = require("tom-fischer-joi");
 
 const UserService = require("../services/UserService");
 
-const signIn = async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = res.locals.body;
   const userService = new UserService();
 
@@ -28,13 +28,13 @@ const resetTemporaryPassword = async (req, res) => {
 
 router.post(
   "/",
-  middleware.validate.body(joi.signIn.signInSchema),
-  asyncHandler(signIn)
+  middleware.validate.body(joi.login.loginSchema),
+  asyncHandler(login)
 );
 
 router.post(
   "/reset-temporary-password",
-  middleware.validate.body(joi.signIn.resetTemporaryPasswordSchema),
+  middleware.validate.body(joi.login.resetTemporaryPasswordSchema),
   asyncHandler(resetTemporaryPassword)
 );
 

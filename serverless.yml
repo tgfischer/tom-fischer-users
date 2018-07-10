@@ -26,18 +26,18 @@ provider:
     COGNITO_USER_POOL_REGION: ${self:provider.region}
 
 functions:
-  signIn:
+  login:
     handler: src/index.handler
     events:
       - http:
-          path: /api/signin
+          path: /api/login
           method: POST
           cors: true
   resetTemporaryPassword:
     handler: src/index.handler
     events:
       - http:
-          path: /api/signin/reset-temporary-password
+          path: /api/login/reset-temporary-password
           method: POST
           cors: true
 
